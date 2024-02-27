@@ -55,10 +55,6 @@ a {
 h1 {
     display: block;
     font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 .main__word {
@@ -91,10 +87,6 @@ button {
     width: 600px;
     height: auto;
 }
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
 
 .footer__container {
     display: flex;
@@ -116,12 +108,58 @@ img {
   }
   
   .gallery__logo {
-    filter: invert(58%) sepia(0%) saturate(1397%) hue-rotate(180deg)
-      brightness(91%) contrast(85%);
+    filter: invert(58%) sepia(0%) saturate(1397%) hue-rotate(180deg) brightness(91%) contrast(85%);
     height: 38px;
     object-fit: contain;
   }
   
   .gallery__logo4 {
     height: 20px;
+  }
+
+  @media (max-width: 500px) {
+    
+    body{
+        padding: 40px;
+    }
+    nav{
+        display: none;
+    }
+    .main__container{
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 80px;    
+    }
+    .main__left{
+        width: 400px;
+        text-align: center;
+    }
+    .main__right{
+        width: 400px;
+        text-align: center;
+    }
+    
+    .main__image {
+        width: 90%;
+    }
+    .main__title{
+        margin-bottom: 20px;
+    }
+    .main__description{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer__container{
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gallery__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-rows: repeat(3, 1fr);    /* Three rows */
+        gap: 15px;
+    }
   }
